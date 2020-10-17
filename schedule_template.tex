@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt,landscape]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{geometry}
+\geometry{
+    textwidth=277mm,
+    textheight=190mm,
+    inner=10mm,
+    outer=10mm,
+    top=10mm,
+    bottom=10mm
+}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%% - Usage Changes - %%%%%%%%%%%%%%%%%%%%
+\newcommand{\semester}{semester}
+\newcommand{\user}{Name}
+\definecolor{disciplineColor}{rgb}{1,1,0.6} 
+\definecolor{doubtsTimeColor}{rgb}{0.98,0.75,0.56}
+\definecolor{extraActivityColor}{rgb}{1,0.8,1}
+\definecolor{tableLineColor}{rgb}{0.664,0.824,0.908}
+%%%%%%%%%%%%%%%%% - End of Usage Changes - %%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%% - Header - %%%%%%%%%%%%%%%%%%%%%%%%
+	{\ } \vfill
+	\begin{center}
+		{\huge \bf \semester\ Semester Schedule - \user}
+	\end{center}
+%%%%%%%%%%%%%%%%%%%%% - End of Header - %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% - Template's Body - %%%%%%%%%%%%%%%%%%%
+	\vfill
+	\begin{table}[H]
+		\centering
+		\begin{spacing}{1.25}
+			\begin{tabular}{cC{47mm}C{47mm}C{47mm}C{47mm}C{47mm}}
+				\toprule
+				& Monday & Tuesday & Wednesday & Thursday & Friday \\
+				\rowcolor{tableLineColor}
+				07:30-08:20& \cellcolor{extraActivityColor}Extracurricular Activity & & & & \\
+				08:20-09:10& \cellcolor{extraActivityColor}Extracurricular Activity & & & & \\
+				\rowcolor{tableLineColor}
+				09:10-10:00& & & \cellcolor{doubtsTimeColor}Doubts Time & & \\
+				10:10-11:00& & & \cellcolor{doubtsTimeColor}Doubts Time & & \\
+				\rowcolor{tableLineColor}
+				11:00-11:50& & & & & \\
+				& & & & & \\
+				\rowcolor{tableLineColor}
+				13:30-14:20& & & & & \\
+				14:20-15:10& & & & & \\
+				\rowcolor{tableLineColor}
+				15:10-16:00& & & & & \\
+				16:20-17:10& & \cellcolor{disciplineColor}Discipline & & & \\
+				\rowcolor{tableLineColor}
+				17:10-18:00& & \cellcolor{disciplineColor}Discipline & & & \\
+				& & & & & \\
+				\rowcolor{tableLineColor}
+				18:30-19:20& & & & & \\
+				19:20-20:10& & & & & \\
+				\rowcolor{tableLineColor}
+				20:20-21:10& & & & & \\
+				21:10-22:00& & & & & \\
+				\bottomrule
+			\end{tabular}
+		\end{spacing}
+	\end{table}
+	\vfill
+	\begin{table}[H]
+		\raggedright
+		\begin{spacing}{1.25}
+			\begin{tabular}{C{47mm}l}
+				\cellcolor{disciplineColor}Discipline& Discipline's code - discipline's name, Prof.: Name, place: place.\\
+				\cellcolor{doubtsTimeColor}Doubts time& Discipline's code - discipline's name, Prof.: Name, place: place.\\
+				\cellcolor{extraActivityColor}Extracurricular Activity& Activity, place: place.
+			\end{tabular}
+		\end{spacing}
+	\end{table}
+	\vfill
+%%%%%%%%%%%%%%%% - End of Template's Body - %%%%%%%%%%%%%%%%
+
+\end{document}
